@@ -1,0 +1,38 @@
+.card {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 1s;
+  cursor: pointer;
+}
+.cardFront,
+.cardBack {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.45);
+  backface-visibility: hidden; /* todos os elementos que estiverem invertidos não vão estar visiveis */
+}
+.cardFront {
+  background-color: #101c2c;
+  transform: rotateY(180deg);
+}
+
+/* ao adicionar a classe .flip, ela inverte o Front e Back, exibindo o Front e escondendo o Back */
+.flip {
+  transform: rotateY(180deg);
+}
+.icon {
+  height: 80%;
+}
+.cardBack {
+  background-color: #05c3ff;
+  color: #101c2c;
+  font-size: 30px;
+  font-weight: bold;
+}
